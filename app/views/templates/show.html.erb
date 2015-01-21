@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Location:</strong>
+  <%= link_to 'show uploaded pdf', @template.location.url, :format => 'pdf'%>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @template.user_id %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @template.title %>
+</p>
+
+<%= link_to 'Edit', edit_template_path(@template) %> |
+<%= link_to 'Back', templates_path %>
