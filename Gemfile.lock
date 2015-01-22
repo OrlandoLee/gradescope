@@ -38,6 +38,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.8.0)
+    docsplit (0.7.6)
     erubis (2.7.0)
     execjs (2.2.2)
     hike (1.2.3)
@@ -117,6 +118,7 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 4.0.0)
+  docsplit
   jbuilder (~> 1.2)
   jquery-rails
   paperclip (~> 4.2)

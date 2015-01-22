@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150121062940) do
+ActiveRecord::Schema.define(version: 20150122072546) do
 
   create_table "templates", force: true do |t|
     t.string   "location"
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 20150121062940) do
     t.string   "location_content_type"
     t.integer  "location_file_size"
     t.datetime "location_updated_at"
+    t.text     "preview_image_links"
   end
 
 end
