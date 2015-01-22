@@ -3,6 +3,9 @@
 <p>
   <strong>Location:</strong>
   <%= link_to 'show uploaded pdf', @template.location.url, :format => 'pdf'%>
+<%@template.preview_image_links.each do |link|%>
+  <%= image_tag link %>
+<%end%>
 </p>
 
 <p>

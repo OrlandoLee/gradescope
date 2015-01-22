@@ -1,6 +1,6 @@
 class TemplatesController < ApplicationController
   before_action :set_template, only: [:show, :edit, :update, :destroy]
-
+  
   # GET /templates
   # GET /templates.json
   def index
@@ -28,6 +28,9 @@ class TemplatesController < ApplicationController
 
     respond_to do |format|
       if @template.save
+        @template.preview_image_links  = PreviewImageGenerator.new(@template).preview_image_links
+        @template.save
+        
         format.html { redirect_to @template, notice: 'Template was successfully created.' }
         format.json { render action: 'show', status: :created, location: @template }
       else
