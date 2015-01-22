@@ -28,19 +28,7 @@ class TemplatesController < ApplicationController
 
     respond_to do |format|
       if @template.save
-        
-        #need progress bar
-        #extract this into link caculator
-        pages = Docsplit.extract_length(@template.location.path)
-        Docsplit.extract_images(@template.location.path, :size => '360x', :output => @template.location.path.split('/')[0..-3].join('/')+'/images')
-        base = @template.location.url.split('/')[0..-3].join('/')+'/images/'
-        name = @template.location.path.split('/').last.split('.').first
-        @preview_image_links = []
-        pages.times do |index|
-          @preview_image_links << base + name + '_'+(index+1).to_s+'.png'
-        end
-        ######
-        @template.preview_image_links  = @preview_image_links
+        @template.preview_image_links  = PreviewImageGenerator.new(@template).preview_image_links
         @template.save
         
         format.html { redirect_to @template, notice: 'Template was successfully created.' }
