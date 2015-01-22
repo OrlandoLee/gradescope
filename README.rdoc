@@ -1,28 +1,21 @@
-== README
+==Install GraphicsMagick.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Its ‘gm’ command is used to generate images.
+<br>
+Either compile it from source, or use a package manager: aptitude | port | brew install graphicsmagick
+<br>
 
-Things you may want to cover:
+==Install Poppler.
 
-* Ruby version
+On Linux, use aptitude, apt-get or yum: aptitude install poppler-utils poppler-data
+<br>
+On the Mac, you can install from source or use MacPorts: sudo port install poppler | brew install poppler
+<br>
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+==Install ghostscript
+aptitude | port | brew install ghostscript
+==Install pdftk.
+On Linux, use aptitude, apt-get or yum: aptitude install pdftk
+<br>
+On the Mac, you can download a recent installer for the binary. Without pdftk installed, you can use Docsplit, but won't be able to split apart a multi-page PDF into single-page PDFs.
+<br>
