@@ -28,7 +28,9 @@ class TemplatesController < ApplicationController
 
     respond_to do |format|
       if @template.save
-        @template.preview_image_links  = PreviewImageGenerator.new(@template).preview_image_links
+        image_generator = ImageGenerator.new(@template)
+        @template.preview_image_links  = image_generator.preview_image_links
+        @template.original_image_links  = image_generator.original_image_links
         @template.save
         
         format.html { redirect_to @template, notice: 'Template was successfully created.' }
