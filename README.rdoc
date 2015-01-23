@@ -1,21 +1,15 @@
 ==Install GraphicsMagick.
 
 Its ‘gm’ command is used to generate images.
-<br>
 Either compile it from source, or use a package manager: aptitude | port | brew install graphicsmagick
-<br>
 
 ==Install Poppler.
 
 On Linux, use aptitude, apt-get or yum: aptitude install poppler-utils poppler-data
-<br>
 On the Mac, you can install from source or use MacPorts: sudo port install poppler | brew install poppler
-<br>
 
 ==Install ghostscript
 aptitude | port | brew install ghostscript
 ==Install pdftk.
 On Linux, use aptitude, apt-get or yum: aptitude install pdftk
-<br>
 On the Mac, you can download a recent installer for the binary. Without pdftk installed, you can use Docsplit, but won't be able to split apart a multi-page PDF into single-page PDFs.
-<br>
