@@ -11,13 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150123080724) do
+ActiveRecord::Schema.define(version: 20150124050930) do
 
   create_table "original_image_links", force: true do |t|
     t.string   "link"
     t.integer  "submission_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "page"
   end
 
   create_table "preview_image_links", force: true do |t|
@@ -25,6 +26,7 @@ ActiveRecord::Schema.define(version: 20150123080724) do
     t.integer  "submission_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "page"
   end
 
   create_table "submissions", force: true do |t|

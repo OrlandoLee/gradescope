@@ -15,5 +15,8 @@
   <%= @submission.annotations %>
 </p>
 
+<%@submission.original_image_links.each do |link|%>
+  <%= image_tag link.link %>
+<%end%>
 <%= link_to 'Edit', edit_submission_path(@submission) %> |
 <%= link_to 'Back', submissions_path %>
