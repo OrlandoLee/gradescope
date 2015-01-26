@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150124050930) do
+ActiveRecord::Schema.define(version: 20150126061553) do
 
   create_table "original_image_links", force: true do |t|
     t.string   "link"
@@ -27,6 +27,20 @@ ActiveRecord::Schema.define(version: 20150124050930) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "page"
+  end
+
+  create_table "questions", force: true do |t|
+    t.integer  "template_id"
+    t.integer  "page"
+    t.integer  "x1"
+    t.integer  "x2"
+    t.integer  "y1"
+    t.integer  "y2"
+    t.integer  "height"
+    t.integer  "width"
+    t.integer  "points"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "submissions", force: true do |t|

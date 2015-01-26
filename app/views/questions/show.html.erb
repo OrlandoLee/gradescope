@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Template:</strong>
+  <%= @question.template_id %>
+</p>
+
+<p>
+  <strong>Page:</strong>
+  <%= @question.page %>
+</p>
+
+<p>
+  <strong>X1:</strong>
+  <%= @question.x1 %>
+</p>
+
+<p>
+  <strong>X2:</strong>
+  <%= @question.x2 %>
+</p>
+
+<p>
+  <strong>Y1:</strong>
+  <%= @question.y1 %>
+</p>
+
+<p>
+  <strong>Y2:</strong>
+  <%= @question.y2 %>
+</p>
+
+<p>
+  <strong>Height:</strong>
+  <%= @question.height %>
+</p>
+
+<p>
+  <strong>Width:</strong>
+  <%= @question.width %>
+</p>
+
+<p>
+  <strong>Points:</strong>
+  <%= @question.points %>
+</p>
+
+<%= link_to 'Edit', edit_question_path(@question) %> |
+<%= link_to 'Back', questions_path %>

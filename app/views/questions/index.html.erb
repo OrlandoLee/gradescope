@@ -1,0 +1,43 @@
+<h1>Listing questions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Template</th>
+      <th>Page</th>
+      <th>X1</th>
+      <th>X2</th>
+      <th>Y1</th>
+      <th>Y2</th>
+      <th>Height</th>
+      <th>Width</th>
+      <th>Points</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @questions.each do |question| %>
+      <tr>
+        <td><%= question.template_id %></td>
+        <td><%= question.page %></td>
+        <td><%= question.x1 %></td>
+        <td><%= question.x2 %></td>
+        <td><%= question.y1 %></td>
+        <td><%= question.y2 %></td>
+        <td><%= question.height %></td>
+        <td><%= question.width %></td>
+        <td><%= question.points %></td>
+        <td><%= link_to 'Show', question %></td>
+        <td><%= link_to 'Edit', edit_question_path(question) %></td>
+        <td><%= link_to 'Destroy', question, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Question', new_question_path %>

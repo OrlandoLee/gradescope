@@ -1,0 +1,53 @@
+<%= form_for(@question) do |f| %>
+  <% if @question.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@question.errors.count, "error") %> prohibited this question from being saved:</h2>
+
+      <ul>
+      <% @question.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :template_id %><br>
+    <%= f.number_field :template_id %>
+  </div>
+  <div class="field">
+    <%= f.label :page %><br>
+    <%= f.number_field :page %>
+  </div>
+  <div class="field">
+    <%= f.label :x1 %><br>
+    <%= f.number_field :x1 %>
+  </div>
+  <div class="field">
+    <%= f.label :x2 %><br>
+    <%= f.number_field :x2 %>
+  </div>
+  <div class="field">
+    <%= f.label :y1 %><br>
+    <%= f.number_field :y1 %>
+  </div>
+  <div class="field">
+    <%= f.label :y2 %><br>
+    <%= f.number_field :y2 %>
+  </div>
+  <div class="field">
+    <%= f.label :height %><br>
+    <%= f.number_field :height %>
+  </div>
+  <div class="field">
+    <%= f.label :width %><br>
+    <%= f.number_field :width %>
+  </div>
+  <div class="field">
+    <%= f.label :points %><br>
+    <%= f.number_field :points %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
