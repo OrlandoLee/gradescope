@@ -39,3 +39,9 @@ div.select_box {
 
 <%= link_to 'Edit', edit_submission_path(@submission) %> |
 <%= link_to 'Back', submissions_path %>
+
+<script>
+$(document).ready(function (){
+	$('.select_box').css({'height': (1650*<%=@question.height/470.0%>)+'px' , 'width': (1275*<%=@question.width/364.0%>)+'px', 'top': (1650*<%=@question.y1/470.0%>)+'px', 'left': (1275*<%=@question.x1/364.0%>)+'px'});
+});
+</script>
