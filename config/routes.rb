@@ -1,4 +1,6 @@
 Gradescope::Application.routes.draw do
+  resources :questions
+
   resources :submissions
 
   resources :templates
