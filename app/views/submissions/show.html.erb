@@ -1,5 +1,5 @@
 <style>
-div.select_box {
+.image__select_box {
 	position: absolute;
 	top: 0px;
 	left: 500px;
@@ -33,7 +33,7 @@ div.select_box {
 <%@submission.original_image_links.each do |link|%>
 <div class='image'>
   <%= image_tag link.link%>
-  <div class='select_box'></div>
+  <div class='image__select_box js-grade-block'></div>
 </div>
 <%end%>
 
@@ -42,6 +42,9 @@ div.select_box {
 
 <script>
 $(document).ready(function (){
-	$('.select_box').css({'height': (1650*<%=@question.height/470.0%>)+'px' , 'width': (1275*<%=@question.width/364.0%>)+'px', 'top': (1650*<%=@question.y1/470.0%>)+'px', 'left': (1275*<%=@question.x1/364.0%>)+'px'});
+	$('.image__select_box').css({'height': (1650*<%=@question.height/470.0%>)+'px' , 'width': (1275*<%=@question.width/364.0%>)+'px', 'top': (1650*<%=@question.y1/470.0%>)+'px', 'left': (1275*<%=@question.x1/364.0%>)+'px'});
+});
+$('.js-grade-block').on('click', function (){
+	$(this).html('grade now?');
 });
 </script>
