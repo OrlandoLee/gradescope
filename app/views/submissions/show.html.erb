@@ -33,7 +33,12 @@
 <%@submission.original_image_links.each do |link|%>
 <div class='image'>
   <%= image_tag link.link%>
-  <div class='image__select_box js-grade-block'></div>
+  <div class='image__select_box js-grade-block'>
+  	<%=simple_form_for(Score.new, remote: true) do |f|%>
+		<%=f.input :score %>
+		<%=f.submit%>
+    <%end%>
+  </div>
 </div>
 <%end%>
 
@@ -44,7 +49,7 @@
 $(document).ready(function (){
 	$('.image__select_box').css({'height': (1650*<%=@question.height/470.0%>)+'px' , 'width': (1275*<%=@question.width/364.0%>)+'px', 'top': (1650*<%=@question.y1/470.0%>)+'px', 'left': (1275*<%=@question.x1/364.0%>)+'px'});
 });
-$('.js-grade-block').on('click', function (){
-	$(this).html('grade now?');
-});
+// $('.js-grade-block').on('click', function (){
+// 	$(this).html('grade now?');
+// });
 </script>

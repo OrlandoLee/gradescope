@@ -30,7 +30,7 @@ gem 'jbuilder', '~> 1.2'
 gem 'paperclip', '~> 4.2'
 gem 'docsplit'
 gem 'jcrop-rails-v2', '~> 0.9.12.3'
-
+gem 'simple_form'
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false

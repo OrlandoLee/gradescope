@@ -1,4 +1,6 @@
 Gradescope::Application.routes.draw do
+  resources :scores
+
   resources :questions
 
   resources :submissions
