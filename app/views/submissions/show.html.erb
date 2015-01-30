@@ -36,6 +36,7 @@
   <div class='image__select_box js-grade-block'>
   	<%=simple_form_for(Score.new, remote: true) do |f|%>
 		<%=f.input :score %>
+		<%=f.input :notes %>
 		<%=f.submit%>
     <%end%>
   </div>
